@@ -1,0 +1,375 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idea Smart Wifi 3G Netsetter</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .logo{
+            width: 200px;
+            height: 170px;
+            margin-top: -10px;
+            margin-bottom: -10px;
+        }
+
+        .navbar{
+            height: 130px;
+        }
+
+        .nav-link{
+            font-weight: bolder;
+            font-size: 18px;
+            margin-left: 20px;
+        }
+
+        .navbar-nav{
+            margin-left: 30px;
+            margin-right: 10px;
+        }
+
+        .btn-danger{
+            background-color: black !important;
+            border: black;
+            width: 150px;
+            border-radius: 10px;
+            margin-left: 30px;
+        }
+
+        .btn-danger:hover{
+            background-color: darkred !important;
+        }
+
+        .container-fluid{
+            margin-top: 150px;
+        }
+
+        .carousel{
+            margin-top: 50px;
+            margin-bottom: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        .btn-warning{
+            width: 250px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            margin-bottom: 70px;
+        }
+
+        .main_heading{
+            margin-top: 30px;
+            text-align: center;
+            font-weight: lighter;
+            font-family: 'Times New Roman', Times, serif;
+            margin-bottom: 20px;
+        }
+
+        .icon{
+            width: 70px;
+            margin-left: 50px;
+        }
+
+        .description{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: darkgreen;
+            font-size: 18px;
+            margin-left: 50px;
+        }
+
+        .price{
+            margin-top: 10px;
+            margin-bottom: 80px;
+            margin-left: 50px;
+            font-size: 28px;
+        }
+
+        .box{
+           border: 2px solid lightgray; 
+           margin-left: auto;
+           margin-right: auto;
+           display: block;
+        }
+
+        .sub_head{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 20px;
+            font-size: 25px;
+        }
+
+        hr{
+            margin-bottom: 20px;
+            color: lightgray
+        }
+
+        .sub_head2{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 20px;
+            font-size: 20px;
+        }
+
+        .content1{
+            font-size: 10px;
+            color: darkgray;
+            margin-left: 20px;
+        }
+
+        .content2{
+            font-size: 10px;
+            color: black;
+            
+        }
+
+
+
+
+        #container5{
+            background-color: black;
+            color: white;
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
+        .footer-head{
+            font-weight: bolder;
+            font-size: 25px;
+            margin-bottom: 30px;
+        }
+
+        .footer-description{
+            margin-bottom: 30px;
+            color: darkgray !important;
+        }
+
+        .fa-instagram{
+            font-size: 30px;
+            width: 40px;
+            height: 40px;
+            border-radius: 100px;
+            background-color: white;
+            color: black;
+            padding-left: 6px;
+            padding-top: 5px;
+        }
+
+        .fa-instagram:hover{
+            background-color: darkgreen;
+            color: white;
+        }
+
+        .fa-whatsapp{
+            font-size: 30px;
+            width: 40px;
+            height: 40px;
+            border-radius: 100px;
+            background-color: white;
+            color: black;
+            padding-left: 6px;
+            padding-top: 5px;
+        }
+
+        .fa-whatsapp:hover{
+            background-color: darkgreen;
+            color: white;
+        }
+
+        .fa-envelope{
+            font-size: 25px !important;
+            width: 40px;
+            height: 40px;
+            border-radius: 100px;
+            background-color: white;
+            color: black;
+            padding-left: 6px;
+            padding-top: 5px;
+        }
+
+        .fa-envelope:hover{
+            background-color: darkgreen;
+            color: white;
+        }
+
+        .link{
+            text-decoration: none !important;
+            color: lightgray !important;
+        }
+
+        .link:hover{
+            color: darkgreen !important;
+        }
+
+        .fa-envelope-open-o{
+            font-size: 25px !important;
+            margin-right: 10px;
+            color: lawngreen;
+            
+        }
+
+        .fa-phone{
+            font-size: 25px !important;
+            margin-right: 10px;
+            color: lawngreen;
+        }
+
+        .fa-map-marker{
+            font-size: 25px !important;
+            margin-right: 10px;
+            color: lawngreen;
+        }
+
+        .footer-label{
+            color: lawngreen;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-success">
+        <a class="navbar-brand" href="#"><img src="{% static 'images/restorehub1.png' %}" class="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse bg-success" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'products' %}">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact_us' %}">Contact Us</a>
+                </li>
+
+                <button class="btn btn-danger my-2 my-sm-0" type="submit" onclick="window.location.href='https://api.whatsapp.com/send?phone=8848193954'">Enquire Now</button>
+            
+            </ul>
+         
+        </div>
+    </nav>
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 col-lg-4">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img src="{% static 'images/netsetter.jpg' %}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'images/netsetter1.jpg' %}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'images/netsetter2.jpg' %}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'images/netsetter3.jpg' %}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'images/netsetter4.jpg' %}" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                </div>
+
+                <a href="{% url 'order_now' %}" class="btn btn-warning"><span class="fa fa-bolt"></span> Buy Now</a>
+
+            </div>
+
+            <div class="col-xs-1 col-lg-1"></div>
+
+            <div class="col-xs-6 col-lg-6">
+                <h3 class="main_heading">Idea Smart 3G Wifi USB Netsetter Plug And Play (White Color)</h3>
+                <img src="{% static 'images/assured.png' %}" class="icon">
+                <p class="description">Fixed Price</p>
+                <h5 class="price"><span class="fa fa-inr"></span> 1,300</h5>
+            
+                <div class="col-xs-6 col-lg-6">
+                    <div class="box">
+                        <p class="sub_head">Specifications</p>
+                        <hr>
+                        <p class="sub_head2">General</p>
+                        <label class="content1">Type</label>          <label class="content2" style="margin-left: 80px;">3G Routers</label><br>
+                        <label class="content1">Installation Features</label>               <label class="content2" style="margin-left: 14px;">Plug And Play</label><br>
+                        <label class="content1">Model Name</label>      <label class="content2" style="margin-left: 45px;">3G Smart Wifi</label><br>
+                        <label class="content1">In The Box</label>       <label class="content2" style="margin-left: 58px;">USB Smart Wifi Router, User Guide</label><br>
+                        <label class="content1">LED Indicator</label>       <label class="content2" style="margin-left: 47px;">Yes</label><br>
+                        <label class="content1">Color</label>        <label class="content2" style="margin-left: 83px;">White</label><br>
+                        <label class="content1">Brand</label>    <label class="content2" style="margin-left: 82px;">Idea</label><br>
+                        <label class="content1">Net Quantity</label>   <label class="content2" style="margin-left: 50px;">1</label><br>
+                        <hr>
+                        <p class="sub_head2">System Requirements</p>
+                        <label class="content1">Operating System</label>           <label class="content2" style="margin-left: 20px;">Windows 7, 8, 8.1</label><br>
+                        <hr>
+                        <p class="sub_head2">Speed</p>
+                        <label class="content1">Wireless Speed</label>     <label class="content2" style="margin-left: 30px;">21.6 Mbps</label><br>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-xs-1 col-lg-1"></div>
+
+        </div>
+    </div>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container-fluid" id="container5">
+        <div class="row">
+            <div class="col-xs-2 col-lg-2"></div>
+
+            <div class="col-xs-3 col-lg-3" style="margin-bottom: 40px;">
+                <h5 class="footer-head">About Us</h5>
+                <p class="footer-description">Restore Hub is the used product selling platform from kerala. We courier product all over kerala. We give you best quality product at best price. We double check every products before courier you.</p>
+                <a href="https://www.instagram.com/restorehub007/"><span class="fa fa-instagram"></span></a> <a href="https://api.whatsapp.com/send?phone=8848193954"><span class="fa fa-whatsapp"></span></a> <a href="mailto:restorehub007@gmail.com"><span class="fa fa-envelope"></span></a>
+            </div>
+
+            <div class="col-xs-2 col-lg-2" style="margin-bottom: 30px;">
+                <h5 class="footer-head">Company</h5>
+                <a href="#about_us" class="link">About Us</a><br><br>
+                <a href="#testimonials" class="link">Testimonials</a><br><br>
+                <a href="{% url 'contact_us' %}" class="link">Contact Us</a><br><br>
+            </div>
+
+            <div class="col-xs-3 col-lg-3">
+                <h5 class="footer-head">Contact</h5>
+                <span class="fa fa-phone"></span> <label class="footer-label">+918848193954</label><br>
+                <span class="fa fa-envelope-open-o"></span> <label class="footer-label">restorehub007@gmail.com</label><br>
+                <span class="fa fa-map-marker"></span> <label class="footer-label">Malappuram, Karuvarakundu</label>
+            </div>
+
+            <div class="col-xs-2 col-lg-2"></div>
+
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>

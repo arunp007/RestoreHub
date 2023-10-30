@@ -1,0 +1,667 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .logo{
+            width: 200px;
+            height: 170px;
+            margin-top: -10px;
+            margin-bottom: -10px;
+        }
+
+        .navbar{
+            height: 130px;
+        }
+
+        .nav-link{
+            font-weight: bolder;
+            font-size: 18px;
+            margin-left: 20px;
+        }
+
+        .navbar-nav{
+            margin-left: 30px;
+            margin-right: 10px;
+        }
+
+        .btn-danger{
+            background-color: black !important;
+            border: black;
+            width: 150px;
+            border-radius: 10px;
+            margin-left: 30px;
+        }
+
+        .btn-danger:hover{
+            background-color: darkred !important;
+        }
+
+        #container{
+            background-color: #17a2b8 !important;
+            padding-top: 150px;
+            padding-bottom: 100px;
+        }
+
+        .head1{
+            color: white;
+            font-weight: bolder;
+            text-align: center;
+            margin-top: 50px;
+            font-family: 'Times New Roman', Times, serif;
+            text-shadow: 2px 2px black !important;
+        }
+
+        .description{
+            margin-top: 30px;
+            text-align: center;
+            color: black;
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+
+        .btn-secondary{
+            width: 150px;
+            border-radius: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            margin-bottom: 50px;
+        }
+
+        .btn-secondary:hover{
+            background-color: darkgreen;
+        }
+
+        .container2{
+            background-color: darkgreen;
+            width: 300px;
+            height: 300px;
+            border-radius: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .container2:hover{
+            background-color: darkgoldenrod;
+            zoom: 95%;
+        }
+
+        .image{
+            width: 250px;
+            margin-left: 20px;
+        }
+
+        .head2{
+            font-weight: bolder;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .description2{
+            color: black;
+            margin-bottom: 50px;
+
+        }
+
+        .grid{
+            width: 300px;
+            height: 250px;
+            background-color: azure;
+            box-shadow:  5px 5px 5px 5px lightgrey;
+            border-radius: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .grid:hover{
+            background-color: #ff1949;
+            transform: translateY(-15px);
+            color: white;
+        }
+
+        .head3{
+            margin-left: 10px;
+            margin-bottom: 15px;
+            margin-top: 10px;
+        }
+
+        .description3{
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .fa{
+            font-size: 50px;
+            margin-left: 10px;
+            margin-top: 20px;
+        }
+
+        #container3{
+            margin-top: 30px;
+            margin-bottom: 100px !important;
+        }
+
+        #container4{
+            background-color: #ff1949;
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
+        .counter{
+            color: white;
+            font-size: 40px;
+            margin-left: 11px !important;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        #fa-icons{
+            color: white;
+            font-size: 40px;
+            margin-top: 30px;
+        }
+
+       
+
+        #grid{
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .description4{
+            font-size: 20px;
+            color: white;
+        }
+
+        .symbol{
+            margin-top: -93px;
+            margin-left: 75px;
+            width: 20px;
+        }
+
+        .main-head{
+            font-size: 30px;
+            text-align: center;
+            font-weight: bolder;
+            color: darkred;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-top: 50px;
+            margin-bottom: 100px;
+        }
+
+        .image2{
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            padding-top: 20px !important;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+        
+        .grid2{
+            width: 280px;
+            height: 300px;
+            background-color: #273b5e;
+            color: white;
+            margin-bottom: 100px;
+            margin-top: 50px;
+            border-radius: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        .flip-card {
+            background-color: none;
+            width: 280px;
+            height: 300px;
+            margin-top: -50px;
+            margin-bottom: 170px;
+            perspective: 1000px; 
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden; 
+            backface-visibility: hidden;
+        }
+
+        .flip-card-front {
+            background-color: #273b5e;
+            color: white;
+            width: 280px;
+            height: 300px;
+            border-radius: 10px;
+        }
+
+        .flip-card-back {
+            background-color: black;
+            color: white;
+            width: 280px;
+            height: 300px;
+            border-radius: 10px;
+            margin-top: -400px;
+            transform: rotateY(180deg);
+        }
+
+        .head4{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .description5{
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        #fa-star{
+            font-size: 30px;
+            color: goldenrod;
+        }
+
+        #container5{
+            background-color: black;
+            color: white;
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
+        .footer-head{
+            font-weight: bolder;
+            font-size: 25px;
+            margin-bottom: 30px;
+        }
+
+        .footer-description{
+            margin-bottom: 30px;
+            color: darkgray !important;
+        }
+
+        .fa-instagram{
+            font-size: 30px;
+            width: 40px;
+            height: 40px;
+            border-radius: 100px;
+            background-color: white;
+            color: black;
+            padding-left: 6px;
+            padding-top: 5px;
+        }
+
+        .fa-instagram:hover{
+            background-color: lightcoral;
+            color: white;
+        }
+
+        .fa-whatsapp{
+            font-size: 30px;
+            width: 40px;
+            height: 40px;
+            border-radius: 100px;
+            background-color: white;
+            color: black;
+            padding-left: 6px;
+            padding-top: 5px;
+        }
+
+        .fa-whatsapp:hover{
+            background-color: lightcoral;
+            color: white;
+        }
+
+        .fa-envelope{
+            font-size: 25px !important;
+            width: 40px;
+            height: 40px;
+            border-radius: 100px;
+            background-color: white;
+            color: black;
+            padding-left: 6px;
+            padding-top: 5px;
+        }
+
+        .fa-envelope:hover{
+            background-color: lightcoral;
+            color: white;
+        }
+
+        .link{
+            text-decoration: none !important;
+            color: lightgray !important;
+        }
+
+        .link:hover{
+            color: lightcoral !important;
+        }
+
+        .fa-envelope-open-o{
+            font-size: 25px !important;
+            margin-right: 10px;
+            color: lightcoral;
+            
+        }
+
+        .fa-phone{
+            font-size: 25px !important;
+            margin-right: 10px;
+            color: lightcoral;
+        }
+
+        .fa-map-marker{
+            font-size: 25px !important;
+            margin-right: 10px;
+            color: lightcoral;
+        }
+
+        .footer-label{
+            color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-info">
+        <a class="navbar-brand" href="#"><img src="{% static 'images/restorehub1.png' %}" class="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse bg-info" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'products' %}">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact_us' %}">Contact Us</a>
+                </li>
+
+                <button class="btn btn-danger my-2 my-sm-0" type="submit" onclick="window.location.href='https://api.whatsapp.com/send?phone=8848193954'">Enquire Now</button>
+            
+            </ul>
+         
+        </div>
+    </nav>
+    
+
+    <div class="container-fluid" id="container">
+       <div class="row">
+            <div class="col-xs-6 col-lg-6">
+                <h3 class="head1">Do You Want To Buy Used Products? <br> Its Easy To Buy Used Products With Us</h3>
+                <p class="description">You can buy used product easily with us. We will courier products all over kerala. <br> We will give you best used product. We are the best used product seller in kerala.</p>
+                <a class="btn btn-secondary" href="https://api.whatsapp.com/send?phone=8848193954">Sell Now</a>
+            </div>
+
+            <div class="col-xs-6 col-lg-6">
+                <div class="container2">
+                    <img src="{% static 'images/shopping.png' %}" class="image">
+                </div>
+            </div>
+
+        </div>
+        <div id="about_us"></div>
+    </div>
+    
+    <div class="container-fluid" id="container3">
+        <div class="row">
+            <div class="col-xs-2 col-lg-2"></div>
+
+            <div class="col-xs-8 col-lg-8">
+                <h1 class="head2">Who We Are</h1>
+                <p class="description2">We are the best used product selling website in kerala. We serve you the best used products at minimal price. We courier your products all over kerala without buying extra delivery charges. We Only Give you assured products at best price.</p>
+            </div>
+
+            <div class="col-xs-2 col-lg-2"></div>
+
+            <div class="col-xs-3 col-lg-3">
+                <div class="grid">
+                    <span class="fa fa-truck"></span>
+                    <h4 class="head3">Fastest Delivery</h4>
+                    <p class="description3">We Deliver Your Product All Over Kerala With In One Or Two Day.</p>
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-lg-3">
+                <div class="grid">
+                    <span class="fa fa-shopping-cart"></span>
+                    <h4 class="head3">Direct Selling</h4>
+                    <p class="description3">You can buy product direct from us or via courier service.</p>
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-lg-3">
+                <div class="grid">
+                    <span class="fa fa-cubes"></span>
+                    <h4 class="head3">Assured Products</h4>
+                    <p class="description3">We double check every product in order to serve you best product.</p>
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-lg-3">
+                <div class="grid">
+                    <span class="fa fa-money"></span>
+                    <h4 class="head3">Best Price</h4>
+                    <p class="description3">We provide you best product at best price.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="container4">
+        <div class="row">
+
+            <div class="col-xs-3 col-lg-3"></div>
+
+            <div class="col-xs-2 col-lg-2" id="grid">
+                <span class="fa fa-cubes" id="fa-icons"></span>
+                <h1 class="counter" data-target="100"></h1><img src="{% static 'images/plus.png' %}" class="symbol">
+                <p class="description4">Products</p>
+            </div>
+
+            <div class="col-xs-2 col-lg-2" id="grid">
+                <span class="fa fa-truck" id="fa-icons"></span>
+                <h1 class="counter" data-target="30"></h1><img src="{% static 'images/plus.png' %}" class="symbol">
+                <p class="description4">Delivery</p>
+            </div>
+
+            <div class="col-xs-2 col-lg-2" id="grid">
+                <span class="fa fa-users" id="fa-icons"></span>
+                <h1 class="counter" data-target="30"></h1><img src="{% static 'images/plus.png' %}" class="symbol">
+                <p class="description4">Happy Customers</p>
+            </div>
+
+            <div class="col-xs-3 col-lg-3"></div>
+            
+        </div>
+        <div id="testimonials"></div>
+    </div>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-lg-12">
+                <h6 class="main-head">TESTIMONIALS</h6>
+            </div>
+
+            <div class="col-xs-3 col-lg-3">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="grid2">
+                            <div class="flip-card-front">
+                                <img src="{% static 'images/rahul.jpg' %}" alt="Avatar" style="width:200px;height:200px; margin-left: auto; margin-right: auto; display: block; padding-top: 30px;">
+                                <h5 class="head4">Rahul</h5>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="grid2" style="background-color: black;">
+                                <p class="description5">Awesome</p>
+                                <span class="fa fa-star" id="fa-star" style="margin-left: 10px;"></span><span class="fa fa-star" id="fa-star"></span><span class="fa fa-star" id="fa-star"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-lg-3">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="grid2">
+                            <div class="flip-card-front">
+                                <img src="{% static 'images/pranav.jpg' %}" alt="Avatar" style="width:200px;height:200px; margin-left: auto; margin-right: auto; display: block; padding-top: 30px;">
+                                <h5 class="head4">Pranav</h5>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="grid2" style="background-color: black;">
+                                <p class="description5">Best quality products.</p>
+                                <span class="fa fa-star" id="fa-star" style="margin-left: 10px;"></span><span class="fa fa-star" id="fa-star"></span><span class="fa fa-star" id="fa-star"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-lg-3">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="grid2">
+                            <div class="flip-card-front">
+                                <img src="{% static 'images/alan.jpg' %}" alt="Avatar" style="width:200px;height:200px; margin-left: auto; margin-right: auto; display: block; padding-top: 30px;">
+                                <h5 class="head4">Alan</h5>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="grid2" style="background-color: black;">
+                                <p class="description5">Great used product website.</p>
+                                <span class="fa fa-star" id="fa-star" style="margin-left: 10px;"></span><span class="fa fa-star" id="fa-star"></span><span class="fa fa-star" id="fa-star"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="col-xs-3 col-lg-3">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="grid2">
+                            <div class="flip-card-front">
+                                <img src="{% static 'images/simon.jpg' %}" alt="Avatar" style="width:200px;height:200px; margin-left: auto; margin-right: auto; display: block; padding-top: 30px;">
+                                <h5 class="head4">Simon</h5>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="grid2" style="background-color: black;">
+                                <p class="description5">Superb</p>
+                                <span class="fa fa-star" id="fa-star" style="margin-left: 10px;"></span><span class="fa fa-star" id="fa-star"></span><span class="fa fa-star" id="fa-star"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <div class="container-fluid" id="container5">
+        <div class="row">
+            <div class="col-xs-2 col-lg-2"></div>
+
+            <div class="col-xs-3 col-lg-3" style="margin-bottom: 40px;">
+                <h5 class="footer-head">About Us</h5>
+                <p class="footer-description">Restore Hub is the used product selling platform from kerala. We courier product all over kerala. We give you best quality product at best price. We double check every products before courier you.</p>
+                <a href="https://www.instagram.com/restorehub007/"><span class="fa fa-instagram"></span></a> <a href="https://api.whatsapp.com/send?phone=8848193954"><span class="fa fa-whatsapp"></span></a> <a href="mailto:restorehub007@gmail.com"><span class="fa fa-envelope"></span></a>
+            </div>
+
+            <div class="col-xs-2 col-lg-2" style="margin-bottom: 30px;">
+                <h5 class="footer-head">Company</h5>
+                <a href="#about_us" class="link">About Us</a><br><br>
+                <a href="#testimonials" class="link">Testimonials</a><br><br>
+                <a href="{% url 'contact_us' %}" class="link">Contact Us</a><br><br>
+            </div>
+
+            <div class="col-xs-3 col-lg-3">
+                <h5 class="footer-head">Contact</h5>
+                <span class="fa fa-phone"></span> <label class="footer-label">+918848193954</label><br>
+                <span class="fa fa-envelope-open-o"></span> <label class="footer-label">restorehub007@gmail.com</label><br>
+                <span class="fa fa-map-marker"></span> <label class="footer-label">Malappuram, Karuvarakundu</label>
+            </div>
+
+            <div class="col-xs-2 col-lg-2"></div>
+
+        </div>
+    </div>
+
+    
+
+    <script>
+        const counters = document.querySelectorAll('.counter');
+        counters.forEach(counter => {
+
+            counter.innerText = '0';
+
+            const updateCounter = () => {
+
+            const target = +counter.getAttribute('data-target');
+
+            const current = +counter.innerText;
+
+            const increment = target / 100;
+
+            if (current < target) {
+                counter.innerText = `${Math.ceil(current + increment)}`;
+                setTimeout(updateCounter, 250);
+            } else {
+                counter.innerText = target;
+            }
+            }
+            updateCounter();
+        });
+    </script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>
