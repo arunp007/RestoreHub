@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products</title>
+    <title>MobFest 3.5mm Clip Microphone For Youtube</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
@@ -43,32 +43,93 @@
         }
 
         .container-fluid{
-            margin-top: 150px !important;
+            margin-top: 150px;
         }
 
-        .card{
+        .carousel{
             margin-top: 50px;
             margin-bottom: 50px;
             margin-left: auto;
             margin-right: auto;
             display: block;
-            height: 480px;
         }
 
-        .card-price{
-            color: green;
+        .btn-warning{
+            width: 250px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            margin-bottom: 70px;
+        }
+
+        .main_heading{
+            margin-top: 30px;
+            text-align: center;
+            font-weight: lighter;
+            font-family: 'Times New Roman', Times, serif;
+            margin-bottom: 20px;
+        }
+
+        .icon{
+            width: 70px;
+            margin-left: 50px;
+        }
+
+        .description{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: darkgreen;
             font-size: 18px;
-            font-weight: bolder;
-            margin-top: 20px;
-            margin-bottom: 20px;
+            margin-left: 50px;
         }
 
-        .btn-success{
-            width: 150px;
-            border-radius: 100px;
+        .price{
+            margin-top: 10px;
+            margin-bottom: 80px;
+            margin-left: 50px;
+            font-size: 28px;
+        }
+
+        .box{
+           border: 2px solid lightgray; 
+           margin-left: auto;
+           margin-right: auto;
+           display: block;
+        }
+
+        .sub_head{
             margin-top: 20px;
             margin-bottom: 20px;
+            margin-left: 20px;
+            font-size: 25px;
         }
+
+        hr{
+            margin-bottom: 20px;
+            color: lightgray
+        }
+
+        .sub_head2{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 20px;
+            font-size: 20px;
+        }
+
+        .content1{
+            font-size: 10px;
+            color: darkgray;
+            margin-left: 20px;
+        }
+
+        .content2{
+            font-size: 10px;
+            color: black;
+            
+        }
+
+
+
 
         #container5{
             background-color: black;
@@ -167,8 +228,6 @@
         .footer-label{
             color: lawngreen;
         }
-
-       
     </style>
 </head>
 <body>
@@ -198,76 +257,66 @@
     </nav>
 
 
+
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xs-3 col-lg-3">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="{% static 'images/buds.jpg' %}" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title">Oneplus Nord Buds CE Head Set</h5>
-                      <p class="card-text">Fixed Price</p>
-                      <h6 class="card-price">₹ 2,100</h6>
-                      <a href="{% url 'product1' %}" class="btn btn-success">Buy Now</a>
+            <div class="col-xs-4 col-lg-4">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img src="{% static 'images/microphone.jpg' %}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'images/microphone1.jpg' %}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'images/microphone2.jpg' %}" class="d-block w-100" alt="...">
+                        </div>
+                    
                     </div>
                 </div>
+
+                <a href="{% url 'order_now' %}" class="btn btn-warning"><span class="fa fa-bolt"></span> Buy Now</a>
+
             </div>
 
-            <div class="col-xs-3 col-lg-3">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="{% static 'images/keyboard.jpg' %}" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">HP C2500 Wired Keyboard And Mouse</h5>
-                        <p class="card-text">Fixed Price</p>
-                        <h6 class="card-price">₹ 650</h6>
-                        <a href="{% url 'product2' %}" class="btn btn-success">Buy Now</a>
+            <div class="col-xs-1 col-lg-1"></div>
+
+            <div class="col-xs-6 col-lg-6">
+                <h3 class="main_heading">MobFest 1.2 Mtr Length 3.5mm Clip Microphone For Youtube</h3>
+                <img src="{% static 'images/assured.png' %}" class="icon">
+                <p class="description">Fixed Price</p>
+                <h5 class="price"><span class="fa fa-inr"></span> 199</h5>
+            
+                <div class="col-xs-6 col-lg-6">
+                    <div class="box">
+                        <p class="sub_head">Specifications</p>
+                        <hr>
+                        <p class="sub_head2">General</p>
+                        <label class="content1">Brand</label>          <label class="content2" style="margin-left: 84px;">Mob Fest</label><br>
+                        <label class="content1">Wired / Wireless</label>               <label class="content2" style="margin-left: 39px;">Wired</label><br>
+                        <label class="content1">Color</label>      <label class="content2" style="margin-left: 88px;">Black</label><br>
+                        <label class="content1">Model Name</label>       <label class="content2" style="margin-left: 55px;">1.2m L 3.5 mm Clip Microphone</label><br>
+                        <label class="content1">Net Quantity</label>   <label class="content2" style="margin-left: 57px;">1</label><br>
+                        
                     </div>
                 </div>
+
             </div>
 
-            <div class="col-xs-3 col-lg-3">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="{% static 'images/netsetter.jpg' %}" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Idea Smart 3G Wifi Net Setter</h5>
-                        <p class="card-text">Fixed Price</p>
-                        <h6 class="card-price">₹ 1,300</h6>
-                        <a href="{% url 'product3' %}" class="btn btn-success">Buy Now</a>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-xs-3 col-lg-3">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="{% static 'images/memory.jpg' %}" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Sandisk Micro Memory Card 8 GB Class 6</h5>
-                        <p class="card-text">Fixed Price</p>
-                        <h6 class="card-price">₹ 199</h6>
-                        <a href="{% url 'product4' %}" class="btn btn-success">Buy Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xs-3 col-lg-3">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="{% static 'images/microphone.jpg' %}" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">MobFest 3.5mm Clip Microphone</h5>
-                        <p class="card-text">Fixed Price</p>
-                        <h6 class="card-price">₹ 199</h6>
-                        <a href="{% url 'product5' %}" class="btn btn-success">Buy Now</a>
-                    </div>
-                </div>
-            </div>
-
-
+            <div class="col-xs-1 col-lg-1"></div>
 
         </div>
     </div>
 
 
+
+
     
+
+
+
+
 
 
 
@@ -304,8 +353,6 @@
 
         </div>
     </div>
-
-
 
 
 

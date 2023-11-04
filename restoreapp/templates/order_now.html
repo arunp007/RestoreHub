@@ -60,9 +60,11 @@
                     <label for="Product"></label>
                     <select name="Product" id="product_name" class="form-control">
                         <option value="" value="">Product Name</option>
-                        <option value="Oneplus Nord Buds CE Headset">Oneplus Nord Buds CE Headset</option>
-                        <option value="Idea Smart 3G Wifi Netsetter">Idea Smart 3G Wifi Netsetter</option>
-                        <option value="HP C2500 Wired Keyboard And Mouse">HP C2500 Wired Keyboard And Mouse</option>
+                        <option value="Oneplus Nord Buds CE Headset">Oneplus Nord Buds CE Headset</option><br>
+                        <option value="Idea Smart 3G Wifi Netsetter">Idea Smart 3G Wifi Netsetter</option><br>
+                        <option value="HP C2500 Wired Keyboard And Mouse">HP C2500 Wired Keyboard And Mouse</option><br>
+                        <option value="Sandisk Memory Card 8 GB">Sandisk Memory Card 8 GB</option><br>
+                        <option value="MobFest 3.5mm Clip Microphone">MobFest 3.5mm Clip Microphone</option><br>
                     </select>
 
                     <button class="btn btn-success" onclick="return product_price()"><span class="fa fa-money"></span> Payable Amount</button>
@@ -111,6 +113,20 @@
 
             if(product_name.value == 'Idea Smart 3G Wifi Netsetter'){
                 document.getElementById('product_error').innerHTML="₹ 1,300 + 40 Delivery Charge"
+                document.getElementById('product_error').style.color="green"
+                document.getElementById('product_error').style.display="block"
+                var status = 0
+            }
+
+            if(product_name.value == 'Sandisk Memory Card 8 GB'){
+                document.getElementById('product_error').innerHTML="₹ 199 + 40 Delivery Charge"
+                document.getElementById('product_error').style.color="green"
+                document.getElementById('product_error').style.display="block"
+                var status = 0
+            }
+
+            if(product_name.value == "MobFest 3.5mm Clip Microphone"){
+                document.getElementById('product_error').innerHTML="₹ 199 + 40 Delivery Charge"
                 document.getElementById('product_error').style.color="green"
                 document.getElementById('product_error').style.display="block"
                 var status = 0

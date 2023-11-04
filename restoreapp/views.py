@@ -19,6 +19,12 @@ def product2(request):
 def product3(request):
     return render(request, 'product3.html')
 
+def product4(request):
+    return render(request, 'product4.html')
+
+def product5(request):
+    return render(request, 'product5.html')
+
 def order_now(request):
     return render(request, 'order_now.html')
 
