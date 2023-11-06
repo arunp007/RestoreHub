@@ -30,3 +30,6 @@ def order_now(request):
 
 def order_success(request):
     return render(request, 'order_success.html')
+
+def sell(request):
+    return render(request, 'sell.html')

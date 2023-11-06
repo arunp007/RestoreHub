@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Products Now</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <style>
+        .container-fluid{
+            background: url(https://images.pexels.com/photos/10723286/pexels-photo-10723286.jpeg);
+            background-size: cover;
+            padding-top: 100px;
+            padding-bottom: 200px;
+        }
+
+        form{
+            padding-top: 50px;
+            padding-bottom: 50px;
+            padding-left: 15px;
+            padding-right: 15px;
+            background-color: rgba(57, 58, 56, 0.6);
+            border-radius: 10px;
+        }
+
+        h4{
+            color: darkgoldenrod;
+            font-size: 25px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bolder;
+            padding-bottom: 20px;
+            padding-top: 15px;
+        }
+
+        .form-control{
+            margin-top: 1px !important;
+            margin-bottom: 1px !important;
+        }
+
+        .btn-warning{
+            margin-top: 30px;
+            margin-bottom: 40px;
+            width: 250px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            
+            <div class="col-xs-3 col-lg-3"></div>
+
+            <div class="col-xs-6 col-lg-6">
+                <form method="post" name="google-sheet">
+                    <h4>Product Details</h4>
+                    <label for="Products"></label>
+                    <input type="text" class="form-control" name="Products" id="pro_name" placeholder="Product Name">
+                    <label id="pro_name_error"></label>
+                    <label for="Description"></label>
+                    <input type="text" class="form-control" name="Description" id="pro_des" placeholder="Product Type">
+                    <label id="pro_des_error"></label>
+                    <label for="Price"></label>
+                    <input type="text" class="form-control" name="Price" id="pro_price" placeholder="Product Price">
+                    <label id="pro_price_error"></label>
+                    <h4>Seller Details</h4>
+                    <label for="Name"></label>
+                    <input type="text" class="form-control" name="Name" id="name" placeholder="Full Name">
+                    <label id="name_error"></label>
+                    <label for="Email"></label>
+                    <input type="text" class="form-control" name="Email" id="email" placeholder="Email Address">
+                    <label id="email_error"></label>
+                    <label for="Phone"></label>
+                    <input type="text" class="form-control" name="Phone" id="phone" placeholder="Phone Number">
+                    <label id="phone_error"></label>
+                    <label for="Address"></label>
+                    <textarea class="form-control" name="Address" id="address" cols="10" rows="5" placeholder="Permanent Address"></textarea>
+                    <label id="address_error"></label>
+                    <button class="btn btn-warning" type="submit" name="submit" onclick="return validation()">Enter</button>
+                </form>
+            </div>
+
+            <div class="col-xs-3 col-lg-3"></div>
+
+        </div>
+    </div>
+
+
+
+    <script>
+        function validation(){
+            var status = 1
+            var pro_name = document.getElementById('pro_name')
+            var pro_des = document.getElementById('pro_des')
+            var pro_price = document.getElementById('pro_price')
+            var name = document.getElementById('name')
+            var email = document.getElementById('email')
+            var phone = document.getElementById('phone')
+            var address = document.getElementById('address')
+
+            if(pro_name.value == ""){
+                document.getElementById('pro_name').style.borderColor="red"
+                document.getElementById('pro_name_error').innerHTML="** Enter your product name **"
+                document.getElementById('pro_name_error').style.color="red"
+                document.getElementById('pro_name_error').style.display="block"
+                var status = 0
+            }
+
+            else{
+                document.getElementById('pro_name').style.borderColor="black"
+                document.getElementById('pro_name_error').style.display="none"
+                var status = 1
+            }
+
+            if(pro_des.value == ""){
+                document.getElementById('pro_des').style.borderColor="red"
+                document.getElementById('pro_des_error').innerHTML="** Enter your product description **"
+                document.getElementById('pro_des_error').style.color="red"
+                document.getElementById('pro_des_error').style.display="block"
+                var status = 0
+            }
+
+            else{
+                document.getElementById('pro_des').style.borderColor="black"
+                document.getElementById('pro_des_error').style.display="none"
+                var status = 1
+            }
+
+            if(pro_price.value == ""){
+                document.getElementById('pro_price').style.borderColor="red"
+                document.getElementById('pro_price_error').innerHTML="** Enter your product price **"
+                document.getElementById('pro_price_error').style.color="red"
+                document.getElementById('pro_price_error').style.display="block"
+                var status = 0
+            }
+
+            else{
+                document.getElementById('pro_price').style.borderColor="black"
+                document.getElementById('pro_price_error').style.display="none"
+                var status = 1
+            }
+
+            if(name.value == ""){
+                document.getElementById('name').style.borderColor="red"
+                document.getElementById('name_error').innerHTML="** Enter your fullname **"
+                document.getElementById('name_error').style.color="red"
+                document.getElementById('name_error').style.display="block"
+                var status = 0
+            }
+
+            else{
+                document.getElementById('name').style.borderColor="black"
+                document.getElementById('name_error').style.display="none"
+                var status = 1
+            }
+
+            if(email.value == ""){
+                document.getElementById('email').style.borderColor="red"
+                document.getElementById('email_error').innerHTML="** Enter your email address **"
+                document.getElementById('email_error').style.color="red"
+                document.getElementById('email_error').style.display="block"
+                var status = 0
+            }
+
+            else{
+                document.getElementById('email').style.borderColor="black"
+                document.getElementById('email_error').style.display="none"
+                var status = 1
+            }
+
+            if(phone.value == ""){
+                document.getElementById('phone').style.borderColor="red"
+                document.getElementById('phone_error').innerHTML="** Enter your phone number **"
+                document.getElementById('phone_error').style.color="red"
+                document.getElementById('phone_error').style.display="block"
+                var status = 0
+            }
+
+            else{
+                document.getElementById('phone').style.borderColor="black"
+                document.getElementById('phone_error').style.display="none"
+                var status = 1
+            }
+
+            if(address.value == ""){
+                document.getElementById('address').style.borderColor="red"
+                document.getElementById('address_error').innerHTML="** Enter your permanent address **"
+                document.getElementById('address_error').style.color="red"
+                document.getElementById('address_error').style.display="block"
+                var status = 0
+            }
+
+            else{
+                document.getElementById('address').style.borderColor="black"
+                document.getElementById('address_error').style.display="none"
+                var status = 1
+            }
+
+            if(status == 0){
+                return false
+            }
+
+            if(status == 1){
+                return true
+            }
+        }
+    </script>
+
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxueq2GLrdQIY1RAmNOPBYXuAHyYOlZE9O4ki74zaufZJHGy9v66-rvmKpuUBJUSzKP/exec'
+        const form = document.forms['google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'post', body: new FormData(form)})
+            .then(Response => alert('Successfull! We Will Contact You Soon...'))
+            .then(Redirect => window.location.href="")
+            .catch(error => console.error('Error', error.message))
+        })
+   </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script> 
+</body>
+</html>
